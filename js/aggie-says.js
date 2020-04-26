@@ -12,3 +12,12 @@ function toggleColorClass(element){
     element.classList.toggle(color + "-dull");
     element.classList.toggle(color + "-highlight");
 }
+
+//Function that blinks a color button
+function blinkButton(element){
+    toggleColorClass(element);
+    SOUNDS[element.dataset.color].play();
+    setTimeout(function(){
+        toggleColorClass(element);
+    }, 350);
+}
