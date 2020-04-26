@@ -1,0 +1,59 @@
+p, button{
+    text-align: center;
+}
+
+button{
+    display: block;
+    margin: auto;
+    width: 6.25rem; /* 100px */
+    height: 3.125rem; /* 50px */
+}
+
+.color-container{
+    display: flex;
+    justify-content: center;
+}
+
+.color-container div{
+    border: 1px solid red;
+    background-color: black;
+    width: 9.375rem; /* 150px */
+    height: 9.375rem; /* 150px */
+}
+
+.final-score{
+    display: hidden;
+}
+
+.yellow-dull{
+    color: #F9C74F;
+}
+
+.yellow-highlight{
+    color: #fffd88;
+}
+
+.green-dull{
+    color: #90BE6D;
+}
+
+.green-highlight{
+    color: #e5febe;
+}
+
+.blue-dull{
+    color: #577590;
+}
+
+.blue-highlight{
+    color: #C9E3E9;
+}
+
+.red-dull{
+    color: #C51912;
+}
+
+.red-highlight{
+    color: #EC8E6D;
+}
+
