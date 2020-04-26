@@ -1,3 +1,27 @@
+.color-container{
+    display: flex;
+    justify-content: center;
+}
+
+.color-container div{
+    border: 1px solid red;
+    background-color: black;
+    width: 9.375rem; /* 150px */
+    height: 9.375rem; /* 150px */
+}
+
 .final-score{
     display: hidden;
 }
+
+p, button{
+    text-align: center;
+}
+
+button{
+    display: block;
+    margin: auto;
+    width: 6.25rem; /* 100px */
+    height: 3.125rem; /* 50px */
+}
+
