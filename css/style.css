@@ -25,3 +25,35 @@ button{
     display: hidden;
 }
 
+.yellow-dull{
+    color: #F9C74F;
+}
+
+.yellow-highlight{
+    color: #fffd88;
+}
+
+.green-dull{
+    color: #90BE6D;
+}
+
+.green-highlight{
+    color: #e5febe;
+}
+
+.blue-dull{
+    color: #577590;
+}
+
+.blue-highlight{
+    color: #C9E3E9;
+}
+
+.red-dull{
+    color: #C51912;
+}
+
+.red-highlight{
+    color: #EC8E6D;
+}
+
