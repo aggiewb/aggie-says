@@ -1,3 +1,14 @@
+p, button{
+    text-align: center;
+}
+
+button{
+    display: block;
+    margin: auto;
+    width: 6.25rem; /* 100px */
+    height: 3.125rem; /* 50px */
+}
+
 .color-container{
     display: flex;
     justify-content: center;
@@ -12,16 +23,5 @@
 
 .final-score{
     display: hidden;
-}
-
-p, button{
-    text-align: center;
-}
-
-button{
-    display: block;
-    margin: auto;
-    width: 6.25rem; /* 100px */
-    height: 3.125rem; /* 50px */
 }
 
