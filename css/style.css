@@ -17,7 +17,7 @@ button{
 .color-container div{
     width: 9.375rem; /* 150px */
     height: 9.375rem; /* 150px */
-    margin: 0.625em ; /* 10px */
+    margin: 0.313rem ; /* 5px */
     border: 0.313rem solid black; /* 5px */
 }
 
