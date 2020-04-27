@@ -66,3 +66,13 @@ function playIncorrectSequence(){
         toggleColorClass(correctButton);
     }, 1500);
 }
+
+//Function that is called when a player clicks a color button
+function handleButtonClick(event){
+    var button = event.target;
+    if(sequence[count] === button.dataset.color){
+        playCorrectSequence(button);
+    } else {
+        playIncorrectSequence();
+    }
+}
