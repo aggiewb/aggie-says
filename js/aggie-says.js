@@ -1,3 +1,5 @@
+(function(){
+
 var SOUNDS = {
     blue: new Audio("media/cat.mp3"),
     yellow: new Audio("media/goat.mp3"),
@@ -107,3 +109,4 @@ for(var i = 0; i < buttons.length; i++){
 }
 
 document.querySelector("button").addEventListener("click", startGame);
+})();
