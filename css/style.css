@@ -1,5 +1,15 @@
-p, button{
+p, button, footer, a{
     text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    margin: 0.625rem; /* 10px */
+}
+
+footer {
+    margin: 1.250rem; /* 20px */
+}
+
+a {
+    display: block;
 }
 
 button{
@@ -7,6 +17,7 @@ button{
     margin: auto;
     width: 6.25rem; /* 100px */
     height: 3.125rem; /* 50px */
+    border-radius: 0.313rem; /* 5px */
 }
 
 .color-container{
