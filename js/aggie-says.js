@@ -77,3 +77,12 @@ function handleButtonClick(event){
         playIncorrectSequence();
     }
 }
+
+//Function that starts a new game
+function startGame(){
+    document.querySelector("button").classList.add("hide");
+    sequence = [];
+    count = 0;
+    addToSequence();
+    playSequence();
+}
