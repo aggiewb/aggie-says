@@ -6,6 +6,10 @@ var SOUNDS = {
     incorrect: new Audio("media/fart.mp3")
 };
 
+var COLORS = ["yellow", "red", "blue", "green"];
+
+var sequence = [];
+
 //Function that highlight a button
 function toggleColorClass(element){
     var color = element.dataset.color;
@@ -20,4 +24,10 @@ function blinkButton(element){
     setTimeout(function(){
         toggleColorClass(element);
     }, 350);
+}
+
+//Function that adds a color to the sequence
+function addToSequence(){
+    var randomIndex = Math.floor(Math.random() * 4);
+    sequence.push(COLORS[randomIndex]);
 }
