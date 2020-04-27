@@ -10,6 +10,7 @@ var COLORS = ["yellow", "red", "blue", "green"];
 var sequence = [];
 var count = 0;
 var isPlayerTurn = false;
+var score = 0;
 
 //Function that highlight a button
 function toggleColorClass(element){
@@ -49,7 +50,7 @@ function playSequence(){
 }
 
 //Function when player clicks the correct buttons
-function playCorrectSequence(element){
+function handleCorrectClick(element){
     blinkButton(element);
     count++;
     if(count === sequence.length){
@@ -57,11 +58,12 @@ function playCorrectSequence(element){
         setTimeout(playSequence, 1000);
         count = 0;
         isPlayerTurn = false;
+        score++;
     }
 }
 
 //Function when the player clicks the incorrect button
-function playIncorrectSequence(){
+function handleIncorrectClick(){
     isPlayerTurn = false;
     SOUNDS.incorrect.play();
     document.querySelector("button").classList.remove("hide");
@@ -70,6 +72,8 @@ function playIncorrectSequence(){
     setTimeout(function(){
         toggleColorClass(correctButton);
     }, 1500);
+    document.querySelector("p").classList.remove("hide");
+    document.querySelector("p").textContent = "Final Score: " + score;
 }
 
 //Function that is called when a player clicks a color button
@@ -79,17 +83,19 @@ function handleButtonClick(event){
     }
     var button = event.target;
     if(sequence[count] === button.dataset.color){
-        playCorrectSequence(button);
+        handleCorrectClick(button);
     } else {
-        playIncorrectSequence();
+        handleIncorrectClick();
     }
 }
 
 //Function that starts a new game
 function startGame(){
     document.querySelector("button").classList.add("hide");
+    document.querySelector("p").classList.add("hide");
     sequence = [];
     count = 0;
+    score = 0;
     addToSequence();
     playSequence();
 }
