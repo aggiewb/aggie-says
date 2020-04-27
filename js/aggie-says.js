@@ -9,6 +9,7 @@ var COLORS = ["yellow", "red", "blue", "green"];
 
 var sequence = [];
 var count = 0;
+var isPlayerTurn = false;
 
 //Function that highlight a button
 function toggleColorClass(element){
@@ -38,6 +39,7 @@ function playSequence(){
     var sequenceInterval = setInterval(function(){
         if(intervalCount === sequence.length){
             clearInterval(sequenceInterval);
+            isPlayerTurn = true;
         } else {
             var color = sequence[intervalCount];
             blinkButton(document.querySelector("[data-color=\"" + color + "\"]"));
@@ -54,11 +56,13 @@ function playCorrectSequence(element){
         addToSequence();
         setTimeout(playSequence, 1000);
         count = 0;
+        isPlayerTurn = false;
     }
 }
 
 //Function when the player clicks the incorrect button
 function playIncorrectSequence(){
+    isPlayerTurn = false;
     SOUNDS.incorrect.play();
     document.querySelector("button").classList.remove("hide");
     var correctButton = document.querySelector("[data-color=\"" + sequence[count] + "\"]");
@@ -70,6 +74,9 @@ function playIncorrectSequence(){
 
 //Function that is called when a player clicks a color button
 function handleButtonClick(event){
+    if(!isPlayerTurn){
+        return;
+    }
     var button = event.target;
     if(sequence[count] === button.dataset.color){
         playCorrectSequence(button);
