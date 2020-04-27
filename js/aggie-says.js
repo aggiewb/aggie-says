@@ -31,3 +31,17 @@ function addToSequence(){
     var randomIndex = Math.floor(Math.random() * 4);
     sequence.push(COLORS[randomIndex]);
 }
+
+//Function that plays the color sequence to a player
+function playSequence(){
+    var intervalCount = 0;
+    var sequenceInterval = setInterval(function(){
+        if(intervalCount === sequence.length){
+            clearInterval(sequenceInterval);
+        } else {
+            var color = sequence[intervalCount];
+            blinkButton(document.querySelector("[data-color=\"" + color + "\"]"));
+            intervalCount++;
+        }
+    }, 750);
+}
