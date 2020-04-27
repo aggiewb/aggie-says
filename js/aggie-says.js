@@ -87,6 +87,7 @@ function startGame(){
     playSequence();
 }
 
+//Add click listeners
 var buttons = document.querySelectorAll("[data-color]");
 for(var i = 0; i < buttons.length; i++){
     buttons[i].addEventListener("click", handleButtonClick);
