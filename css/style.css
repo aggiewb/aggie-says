@@ -1,11 +1,11 @@
 p, button, footer, a{
     text-align: center;
     font-family: 'Press Start 2P', cursive;
-    margin: 0.625rem; /* 10px */
+    margin-top: 0.625rem; /* 10px */
 }
 
 footer {
-    margin: 1.250rem; /* 20px */
+    margin-top: 1.250rem; /* 20px */
 }
 
 a {
