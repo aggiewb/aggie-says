@@ -53,6 +53,7 @@ function playCorrectSequence(element){
     if(count === sequence.length){
         addToSequence();
         setTimeout(playSequence, 1000);
+        count = 0;
     }
 }
 
