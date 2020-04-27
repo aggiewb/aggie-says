@@ -55,3 +55,14 @@ function playCorrectSequence(element){
         setTimeout(playSequence, 1000);
     }
 }
+
+//Function when the player clicks the incorrect button
+function playIncorrectSequence(){
+    SOUNDS.incorrect.play();
+    document.querySelector("button").classList.remove("hide");
+    var correctButton = document.querySelector("[data-color=\"" + sequence[count] + "\"]");
+    toggleColorClass(correctButton);
+    setTimeout(function(){
+        toggleColorClass(correctButton);
+    }, 1500);
+}
