@@ -5,10 +5,10 @@ var SOUNDS = {
     red: new Audio("media/dog.mp3"),
     incorrect: new Audio("media/fart.mp3")
 };
-
 var COLORS = ["yellow", "red", "blue", "green"];
 
 var sequence = [];
+var count = 0;
 
 //Function that highlight a button
 function toggleColorClass(element){
@@ -44,4 +44,14 @@ function playSequence(){
             intervalCount++;
         }
     }, 750);
+}
+
+//Function when player clicks the correct buttons
+function playCorrectSequence(element){
+    blinkButton(element);
+    count++;
+    if(count === sequence.length){
+        addToSequence();
+        setTimeout(playSequence, 1000);
+    }
 }
