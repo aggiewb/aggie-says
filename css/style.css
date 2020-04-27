@@ -1,5 +1,15 @@
-p, button{
+p, button, footer, a{
     text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    margin: 0.625rem; /* 10px */
+}
+
+footer {
+    margin: 1.250rem; /* 20px */
+}
+
+a {
+    display: block;
 }
 
 button{
@@ -7,6 +17,7 @@ button{
     margin: auto;
     width: 6.25rem; /* 100px */
     height: 3.125rem; /* 50px */
+    border-radius: 0.313rem; /* 5px */
 }
 
 .color-container{
@@ -15,45 +26,45 @@ button{
 }
 
 .color-container div{
-    border: 1px solid red;
-    background-color: black;
     width: 9.375rem; /* 150px */
     height: 9.375rem; /* 150px */
+    margin: 0.313rem ; /* 5px */
+    border: 0.313rem solid black; /* 5px */
 }
 
-.final-score{
-    display: hidden;
+.hide{
+    display: none;
 }
 
 .yellow-dull{
-    color: #F9C74F;
+    background-color: #F9C74F;
 }
 
 .yellow-highlight{
-    color: #fffd88;
+    background-color: #fffd88;
 }
 
 .green-dull{
-    color: #90BE6D;
+    background-color: #90BE6D;
 }
 
 .green-highlight{
-    color: #e5febe;
+    background-color: #e5febe;
 }
 
 .blue-dull{
-    color: #577590;
+    background-color: #577590;
 }
 
 .blue-highlight{
-    color: #C9E3E9;
+    background-color: #C9E3E9;
 }
 
 .red-dull{
-    color: #C51912;
+    background-color: #C51912;
 }
 
 .red-highlight{
-    color: #EC8E6D;
+    background-color: #EC8E6D;
 }
 
